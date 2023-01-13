@@ -1,0 +1,20 @@
+<button id="increment-btn" onclick="increment()">INCREMENT</button>
+//after clicking onclick we get to do what we want on clicking
+//
+let count = 0;
+let countel = document.getElementById("Id_name")
+function increment(){
+    count = count+1;
+    countel.innertext = count;
+    //innertext changes the value inside the element using js
+}
+
+// Math.random is used to generate random numbers between 0 and 1
+
+
+//Unlike Math.random, Math.floor will take an argument:
+
+const two = Math.floor(2.2598223);
+This function will take 2.2598223 and return 2. The function will round a number down to the 
+nearest integer. 
+For example if we had the number, 2.9999, the function will round this input down to 2.
