@@ -1,0 +1,62 @@
+It's time to take a deeper look at another type of storage: object.
+
+The object initializer syntax starts with an open curly-brace { and ends with a close curly-brace } with a list of key-value pairs in the middle. Let's take a look at a person object:
+
+const person = {
+    hairColor: 'brown',
+    toes: 10,
+    grumpy: true
+}
+ This object shows that we can use numbers, strings and booleans as values.
+
+This person has "brown" hairColor, 10 toes and is grumpy, unfortunately. 
+
+We can retrieve these values by key:
+
+console.log( person.toes ); // 10
+console.log( person.hairColor ); // brown
+
+
+/////////////////////////////////////////////////////////////////
+Given an object, find the number of keys inside the object. Return this number.
+
+function numberOfKeys(object) {
+    return Object.keys(object).length;
+}
+
+module.exports = numberOfKeys;
+
+///The function halfValue takes an array of numbers. It should return a new array with all the original values halved.
+
+//Odd numbers should be rounded up to the nearest whole number.
+function halfValue(numbers) {
+    const newArr = [];
+    
+    for(let i = 0; i < numbers.length; i++) {
+        newArr[i] = Math.round(numbers[i] / 2);
+    }
+
+    return newArr;
+}
+
+module.exports = halfValue;
+
+
+
+
+///Count Vowels
+//Write a function countVowels that takes in a string and counts how many vowels there are in the word. Vowels include: "a", "e", "i", "o", and "u".
+///Handle lowercase and uppercase vowels.
+const vowels = ["a", "e", "i", "o", "u"];
+
+function countVowels(str) {
+    let count = 0;
+    for(let i = 0; i < str.length; i++) {
+        if(vowels.includes(str[i].toLowerCase())) count++;
+    }
+
+    return count;
+}
+
+module.exports = countVowels;
+
